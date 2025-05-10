@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects - Personal Portfolio Website">
+    <title>My Portfolio - Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="Home.html">CHIN PEI WEN</a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="AboutMe.html">About Me</a></li>
+                    <li><a href="Projects.html" class="active">Projects</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects-intro">
+            <div class="container">
+                <h1>My <span class="highlight">Projects</span></h1>
+                <p>A showcase of my recent work and achievements.</p>
+            </div>
+        </section>
+
+        <section class="projects-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="design">UI/UX Design</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid">
+            <div class="container">
+                <div class="projects-container">
+                    <!-- Project 1 -->
+                    <div class="project-item" data-category="web">
+                        <div class="project-image">
+							<img src="butU.jpg" class="pic" style="width:250px; height:250px;"></div>
+						<div class="project-image">
+                            <div class="project-placeholder"></div>
+                        </div>
+                        <div class="project-info">
+                            <h2>Human Computer Interactions</h2>
+                            <p class="project-tags">UI/UX, Wireframing, Figma</p>
+                            <p class="project-description">This project proposes an innovative EV charging station tracker app designed to meet the needs of current and prospective EV drivers.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/users/CHINPEIWEN/projects/2" target="_blank" rel="noopener" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-item" data-category="design">
+                        <div class="project-image">
+						<img src="dbms.jpg" class="pic" style="width:250px; height:250px;"></div>
+						<div class="project-image">
+                            <div class="project-placeholder"></div>
+                        </div>
+                        <div class="project-info">
+                            <h2>Database</h2>
+                            <p class="project-tags">UI/UX, ERD</p>
+                            <p class="project-description">A database system allows businesses to store, manage, and retrieve data efficiently. By implementing this database system, BESTARI Minimart aims to transform its operations and enhance its ability to serve its customers effectively.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/CHINPEIWEN/Database" target="_blank" rel="noopener" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-item" data-category="design">
+					<div class="project-image">
+						<img src="nc.jpg" class="pic" style="width:250px; height:250px;"></div>
+                        <div class="project-image">
+                            <div class="project-placeholder"></div>
+                        </div>
+                        <div class="project-info">
+                            <h2>Network Communications</h2>
+                            <p class="project-description">A central component of the project is to design a building layout that meets these requirements and produce a scaled floor plan using appropriate design software.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/CHINPEIWEN/Network-Communication" target="_blank" rel="noopener" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-item" data-category="design">
+					<div class="project-image">
+						<img src="pt2.jpg" class="pic" style="width:250px; height:250px;"></div>
+                        <div class="project-image">
+                            <div class="project-placeholder"></div>
+                        </div>
+                        <div class="project-info">
+                            <h2>Programming Technique 2</h2>
+                            <p class="project-tags">C++</p>
+                            <p class="project-description">This project aims to tackle the pressing issue of mental health awareness and support, directly aligning with Sustainable Development Goal (SDG) 3: Good Health and Well-being.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/CHINPEIWEN/Programming-Technique-2/tree/main" target="_blank" rel="noopener" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 CHIN PEI WEN. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/CHINPEIWEN" target="_blank" rel="noopener" class="social-icon github">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
