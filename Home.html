@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio Website">
+    <title>My Portfolio - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+	<script src="popup.js"></script>
+</head>
+<body>
+	<body onload="message()">
+    <header>
+        <div class="container header-container">
+			<div class="logo">
+				<a href="Home.html">CHIN PEI WEN</a>
+			</div>
+			<nav>
+			    <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="Home.html" class="active">Home</a></li>
+                    <li><a href="AboutMe.html">About Me</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <div class="intro-content">
+                    <h1>Welcome To My Personal Portfolio Website</h1>
+					<h1>I'm <span class="highlight">CHIN PEI WEN</span></h1>
+                    <h2>A UTM student pursuing a Bachelor of Computer Science (Bioinformatics) with Honours</h2>
+                    <p>Passionate about building responsive and accessible web apps with clean, efficient code.</p>
+                    <div class="intro-buttons">
+                        <a href="AboutMe.html" class="btn btn-secondary">About Me</a>
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <img src="photo.jpg" alt="My Photo" class="profile-pic">
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-skills">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+				<div class="skills-category">
+				<h3 class="category-title">Programming Languages</h3>
+					<div class="skills-grid">
+						<div class="skill-icon" id="html-icon">
+							<span>HTML</span>
+						</div>
+						<div class="skill-icon" id="css-icon">
+							<span>CSS</span>
+						</div>
+						<div class="skill-icon" id="js-icon">
+							<span>JavaScript</span>                        
+						</div>
+						<div class="skill-icon" id="cpp-icon">
+							<span>C++</span>
+						</div>
+						<div class="skill-icon" id="java-icon">
+							<span>Java</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="skills-category">
+				<h3 class="category-title">Tools</h3>
+					 <div class="skills-grid">
+						<div class="skill-icon" id="vscode-icon">
+							<span>VS Code</span>
+						</div>
+						<div class="skill-icon" id="dev-icon">
+							<span>Dev C++</span>
+						</div>
+						<div class="skill-icon" id="notepad-icon">
+							<span>Notepad++</span>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+
+        <section class="my-projects">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="projects-preview">
+                    <div class="project-card">
+                        <div class="project-image">
+						<img src="butU.jpg" class="pic"></div>
+                        <h3>Human Computer Interactions - EV charging station tracker</h3>
+                        <p>Our HCI project is to propose an innovative EV charging station tracker app designed to meet the needs of current and prospective EV drivers. </p>
+                        <a href="Projects.html" class="project-link">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+						<img src="pt2.jpg" class="pic"></div>
+                        <h3>Programming Technique 2</h3>
+                        <p>This project aims to tackle the pressing issue of mental health awareness and support, directly aligning with Sustainable Development Goal (SDG) 3: Good Health and Well-being.</p>
+                        <a href="Projects.html" class="project-link">View Project</a>
+                    </div>
+                </div>
+                <div class="more-projects">
+                    <a href="Projects.html" class="btn btn-primary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 CHIN PEI WEN. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/CHINPEIWEN" target="_blank" rel="noopener" class="social-icon github">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
