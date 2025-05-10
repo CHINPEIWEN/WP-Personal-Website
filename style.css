@@ -1,0 +1,775 @@
+/* Base Styles and Reset */
+:root {
+    --primary-color: #800080;
+    --secondary-color: #c9a0dc;
+    --accent-color: #6a4bf4;
+    --dark-color: #1a1a2e;
+    --light-color: #f7f7ff;
+    --gray-color: #e9ecef;
+    --text-color: #333;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    font-size: 2rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Header and Navigation */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    letter-spacing: 1px;
+}
+
+nav {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after, .nav-menu a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: var(--transition);
+    background-color: var(--text-color);
+}
+
+/* Hero Section */
+.intro {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, rgba(247, 247, 255, 0.9) 0%, rgba(79, 125, 243, 0.1) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.intro .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.intro-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.intro-content h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.intro-content p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.intro-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.intro-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.profile-pic {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Skills Section */
+.featured-skills {
+    padding: 3rem 0;
+    background-color: white;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.skill-icon:hover {
+    transform: translateY(-10px);
+}
+
+.skill-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.skills-category {
+    margin-bottom: 2rem;
+  }
+  
+.category-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+  
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+#html-icon {
+    background-color: #e44d26;
+    color: white;
+}
+
+#css-icon {
+    background-color: #264de4;
+    color: white;
+}
+
+#js-icon {
+    background-color: #f7df1e;
+    color: white;
+}
+
+#cpp-icon {
+    background-color: #008000;
+    color: white;
+}
+
+#java-icon {
+    background-color: #ffa500;
+    color: white;
+}
+
+#vscode-icon {
+    background-color: #03fcdf;
+    color: white;
+}
+  
+#dev-icon {
+    background-color: #007acc;
+    color: white;
+}
+  
+#notepad-icon {
+    background-color: #0acf83;
+    color: white;
+}
+
+/* Projects Section */
+.my-projects {
+    padding: 5rem 0;
+    background-color: var(--gray-color);
+}
+
+.projects-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-top: 2rem;
+}	
+
+img.pic {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.project-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.project-card p {
+    padding: 0 1.5rem 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin: 0 0.5rem 1.5rem;
+    font-weight: 600;
+}
+
+.more-projects {
+    text-align: center;
+    margin-top: 2rem;
+	margin-bottom: 0;
+}
+
+/* About Page Styles - Simple Version */
+.about-simple-intro {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(247, 247, 255, 0.9) 0%, rgba(79, 125, 243, 0.1) 100%);
+}
+
+.about-simple-intro h1 {
+    font-size: 2.5rem;
+}
+
+.about-simple-content {
+    padding: 3rem 0;
+    background-color: white;
+}
+
+.about-simple-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-simple {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-image-simple {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img.photo-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.profile-simple h2 {
+	margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-info {
+    width: 100%;
+}
+
+.about-info h3 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.75rem;
+    font-size: 1.3rem;
+}
+
+.about-info h3:first-child {
+    margin-top: 0;
+}
+
+.contact-simple {
+    padding: 3rem 0;
+    background-color: var(--gray-color);
+    text-align: center;
+}
+
+.contact-links-simple {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.contact-link-simple {
+    padding: 0.75rem 1.25rem;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.contact-link-simple:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .contact-links-simple {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Projects Page Styles */
+.projects-intro {
+    padding: 5rem 0 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(247, 247, 255, 0.9) 0%, rgba(79, 125, 243, 0.1) 100%);
+}
+
+.projects-filter {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--light-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.projects-grid {
+    padding: 2rem 0 5rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+.project-placeholder {
+    height: 10px;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.project-tags {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: white;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+}
+
+/* Add these responsive enhancements to the end of your style.css file */
+
+/* Additional Media Queries for Better Responsiveness */
+
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+    /* Typography scaling */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Intro section */
+    .intro {
+        padding: 3rem 0;
+    }
+    
+    .intro-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .intro-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .intro-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .intro-buttons .btn {
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Profile image sizing */
+    img.profile-pic, 
+    img.photo-pic {
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* Skills section */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Project cards */
+    .projects-preview,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Navigation - additional mobile styling */
+    .nav-menu {
+        top: 60px;
+    }
+    
+    /* Fix menu toggle styling */
+    .menu-toggle {
+        z-index: 1000;
+    }
+}
+
+/* Fix existing media query for nav menu */
+@media (max-width: 768px) {
+    /* Make menu toggle more visible and interactive */
+    .menu-toggle {
+        display: block;
+        z-index: 1000;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    /* Animation for menu toggle */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Nav menu styling when active */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 1.5rem 0;
+    }
+    
+    .nav-menu a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 992px) {
+    .btn, 
+    .nav-menu a,
+    .filter-btn,
+    .project-link,
+    .social-icon {
+        padding: 0.8rem 1.2rem;
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Adjust project cards for better mobile view */
+    .project-card,
+    .project-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Ensure form elements are easily tappable */
+    input, 
+    select, 
+    textarea, 
+    button {
+        min-height: 44px;
+    }
+}
+
+/* Additional responsive utilities */
+.hide-on-mobile {
+    display: block;
+}
+
+.show-on-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    
+    .show-on-mobile {
+        display: block;
+    }
+}
+
